@@ -1,5 +1,5 @@
-import './App.css';
 import SideMenu from './Components/SideMenu';
+import './css/App.css';
 
 function App() {
   return (

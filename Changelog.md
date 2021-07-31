@@ -5,3 +5,9 @@
 - Base created
 - Logo added.
 - menu-toggle button added.
+
+> Version: 0.2:
+
+- sass included.
+- search option added.
+- Divider added.

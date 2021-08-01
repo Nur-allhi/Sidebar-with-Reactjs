@@ -1,16 +1,21 @@
-import React from 'react'
-import logo from '../assets/logo.png'
+import React, { useState } from 'react';
+import logo from '../assets/logo.png';
+
 
 
 function SideMenu() {
+    const [inactive, setInactive] = useState(false)
+
     return (
-        <div className="side-menu">
+        <div className={`side-menu ${inactive ? "inactive" : ""}`}>
             <div className="top-section">
                 <div className="logo">
                     <img src={logo} alt="logo" />
                 </div>
-                <div className="toggle-menu-btn">
-                    <i class="bi bi-arrow-left-square-fill"></i>
+                <div onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
+                    {
+                        inactive ? <i class="bi bi-arrow-right-square-fill"></i> : <i class="bi bi-arrow-left-square-fill"></i>
+                    }
                 </div>
             </div>
             <div className="search-controller">
@@ -20,6 +25,31 @@ function SideMenu() {
                 <input type="text" placeholder="search" />
             </div>
             <div className="divider"></div>
+
+            <div className="main-menu">
+                <ul>
+                    <li className="menu-item">
+                        <div className="menu-icon"> <i class="bi bi-speedometer2"></i> </div>
+                        Dashboard
+                    </li>
+                    <li className="menu-item">
+                        <div className="menu-icon"> <i class="bi bi-card-checklist"></i> </div>
+                        Admin Panel
+                    </li>
+                    <li className="menu-item">
+                        <div className="menu-icon"> <i class="bi bi-pencil-square"></i> </div>
+                        Blog
+                    </li>
+                    {/* <li className="menu-item">
+                        <div className="menu-icon"><img src={dasboardIcon} alt="" /></div>
+                        Dashboard</li>
+                        <li className="menu-item">
+                        <div className="menu-icon"><img src={dasboardIcon} alt="" /></div>
+                        Dashboard</li><li className="menu-item">
+                        <div className="menu-icon"><img src={dasboardIcon} alt="" /></div>
+                        Dashboard</li> */}
+                </ul>
+            </div>
 
         </div>
     )

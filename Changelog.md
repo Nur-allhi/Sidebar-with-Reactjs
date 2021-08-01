@@ -11,3 +11,8 @@
 - sass included.
 - search option added.
 - Divider added.
+
+> Version: 0.3:
+
+- menu item added.
+- menu active / inactive function added.

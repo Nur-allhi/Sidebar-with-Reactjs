@@ -21,3 +21,8 @@
 
 - Sub menu item added.
 - user image and email added.
+
+> Version: 0.5:
+
+- code made dynamic.
+- Menu items moved to separte component.

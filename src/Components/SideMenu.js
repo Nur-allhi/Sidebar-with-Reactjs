@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
+import userIcon from '../assets/user.png';
 
 
 
@@ -28,17 +29,32 @@ function SideMenu() {
 
             <div className="main-menu">
                 <ul>
-                    <li className="menu-item">
-                        <div className="menu-icon"> <i class="bi bi-speedometer2"></i> </div>
-                        Dashboard
+                    <li >
+                        <a className="menu-item" href="Dashboard">
+                            <div className="menu-icon"> <i class="bi bi-speedometer2"></i> </div>
+                            <span>Dashboard</span>
+                        </a>
                     </li>
-                    <li className="menu-item">
-                        <div className="menu-icon"> <i class="bi bi-card-checklist"></i> </div>
-                        Admin Panel
+                    <li >
+                        <a className="menu-item" href="content">
+                            <div className="menu-icon"> <i class="bi bi-card-checklist"></i> </div>
+                            <span> Content</span>
+                        </a>
+                        <ul className="sub-menu">
+                            <li>
+                                <a className="sub-menu-items" href="Coureses">Courses</a>
+                            </li>
+                            <li>
+                                <a className="sub-menu-items" href="Videos">Videos</a>
+                            </li>
+                        </ul>
+
                     </li>
-                    <li className="menu-item">
-                        <div className="menu-icon"> <i class="bi bi-pencil-square"></i> </div>
-                        Blog
+                    <li >
+                        <a className="menu-item" href="Blog">
+                            <div className="menu-icon"> <i class="bi bi-pencil-square"></i> </div>
+                            <span>Blog</span>
+                        </a>
                     </li>
                     {/* <li className="menu-item">
                         <div className="menu-icon"><img src={dasboardIcon} alt="" /></div>
@@ -50,7 +66,15 @@ function SideMenu() {
                         Dashboard</li> */}
                 </ul>
             </div>
-
+            <div className="side-menu-footer">
+                <div className="user-avatar">
+                    <img src={userIcon} alt="UserImage" />
+                </div>
+                <div className="user-info">
+                    <h5>Nur E Allhi</h5>
+                    <p>noorefty1@gmail.com</p>
+                </div>
+            </div>
         </div>
     )
 }

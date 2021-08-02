@@ -17,9 +17,16 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.side-icon-size, .side-menu .logo, .side-menu .search-controller .search-btn, .side-menu .main-menu .menu-item .menu-icon {
+.side-icon-size, .side-menu .logo, .side-menu .search-controller .search-btn, .side-menu .main-menu .menu-item .menu-icon, .side-menu .side-menu-footer .user-avatar {
   width: 40px;
   height: 40px;
+}
+
+.hide-menu-text, .inactive .main-menu .menu-item span, .inactive .side-menu-footer .user-info {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .side-menu {
@@ -113,6 +120,74 @@ body {
   font-size: 20px;
   line-height: 40px;
   text-align: center;
+}
+
+.side-menu .main-menu .menu-item span {
+  position: absolute;
+  display: inline;
+  line-height: 40px;
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.side-menu .main-menu .sub-menu {
+  margin-left: 20px;
+  border-left: 1px solid #666;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.side-menu .main-menu .sub-menu .sub-menu-items {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  margin: 5px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.side-menu .side-menu-footer {
+  width: 100%;
+  background: #333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.side-menu .side-menu-footer .user-avatar {
+  overflow: hidden;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.side-menu .side-menu-footer .user-avatar img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.side-menu .user-info {
+  color: #fff;
+  display: inline-block;
+  margin: 0 10px;
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.side-menu .user-info h5 {
+  font-size: 15px;
+}
+
+.side-menu .user-info p {
+  font-size: 14px;
 }
 
 .inactive {

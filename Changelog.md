@@ -16,3 +16,8 @@
 
 - menu item added.
 - menu active / inactive function added.
+
+> Version: 0.4:
+
+- Sub menu item added.
+- user image and email added.

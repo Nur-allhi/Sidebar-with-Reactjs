@@ -142,6 +142,9 @@
     left: 0;
     padding: 20px;
     box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
     .user-avatar {
       @extend .side-icon-size;
       overflow: hidden;
@@ -194,4 +197,13 @@
       @extend .hide-menu-text;
     }
   }
+}
+.container {
+  margin-left: 300px;
+  transition: margin-left 0.3s ease-in-out;
+  // box-sizing: border-box;
+  // padding: 10px;
+}
+.collapse {
+  margin-left: 80px;
 }

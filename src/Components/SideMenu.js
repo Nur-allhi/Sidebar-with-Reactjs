@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../assets/logo.png';
 import userIcon from '../assets/user.png';
 import MenuItem from './MenuItem';
+
 
 const menuItems = [
     { name: "Dashboard", to: "/", iconClassName: "bi bi-speedometer2" },
@@ -12,9 +13,17 @@ const menuItems = [
     { name: "Blog", to: "/Blog", iconClassName: "bi bi-pencil-square" },
 ]
 
-function SideMenu() {
+function SideMenu(props) {
     const [inactive, setInactive] = useState(false)
 
+    useEffect(() => {
+        if (inactive) {
+            document.querySelectorAll(".sub-menu").forEach(el => {
+                el.classList.remove('sub-menu-active')
+            })
+        }
+        props.onCollapse(inactive)
+    }, [inactive])
     return (
         <div className={`side-menu ${inactive ? "inactive" : ""}`}>
             <div className="top-section">
@@ -45,6 +54,11 @@ function SideMenu() {
                                 iconClassName={menuItem.iconClassName}
                                 to={menuItem.to}
                                 subMenus={menuItem.subMenus || []}
+                                onClick={() => {
+                                    if (inactive) {
+                                        setInactive(false)
+                                    }
+                                }}
                             />
                         )
                     }

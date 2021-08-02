@@ -26,3 +26,9 @@
 
 - code made dynamic.
 - Menu items moved to separte component.
+
+> Version: 0.6:
+
+- recat-router added.
+- Right side component created.
+- Width fixed.

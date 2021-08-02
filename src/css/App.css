@@ -170,6 +170,8 @@ body {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .side-menu .side-menu-footer .user-avatar {
@@ -208,4 +210,14 @@ body {
 
 .inactive .toggle-menu-btn {
   right: -50px;
+}
+
+.container {
+  margin-left: 300px;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.collapse {
+  margin-left: 80px;
 }

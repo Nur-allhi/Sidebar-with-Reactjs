@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
 function MenuItem(props) {
-    const { name, subMenus,iconClassName, to} = props;
+    const { name, subMenus, iconClassName, to, onClick } = props;
     const [expandSubMenu, setExpandSubMenu] = useState(false)
     return (
-        <li >
-
+        <li onClick={onClick}>
             <button onClick={() => setExpandSubMenu(!expandSubMenu)} className="menu-item">
                 <div className="menu-icon"> <i className={iconClassName}></i> </div>
                 <span> {name}</span>

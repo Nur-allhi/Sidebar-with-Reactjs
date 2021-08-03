@@ -32,3 +32,11 @@
 - recat-router added.
 - Right side component created.
 - Width fixed.
+
+> Version: 0.7:
+
+- Menu item organized.
+- React Router nav link added.
+- active menu can be visible.
+
+### Code need some refactoring.

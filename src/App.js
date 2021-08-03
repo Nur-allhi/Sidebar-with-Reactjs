@@ -16,15 +16,14 @@ function App() {
   return (
     <div className="App">
       <Router><SideMenu onCollapse={(inactive) => {
-        console.log(inactive)
         setInactive(inactive)
       }} />
-        <div className={`container ${inactive ? "collapse": ""}`}>
+        <div className={`container ${inactive ? "collapse" : ""}`}>
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Dashboard />
             </Route>
-            <Route path="/content">
+            <Route exact path="/content">
               <Content />
             </Route>
             <Route path="/content/courses">
@@ -36,6 +35,7 @@ function App() {
             <Route path="/blog">
               <Blog />
             </Route>
+
           </Switch>
         </div>
       </Router>

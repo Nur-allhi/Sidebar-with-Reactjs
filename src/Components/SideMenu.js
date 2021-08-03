@@ -5,12 +5,13 @@ import MenuItem from './MenuItem';
 
 
 const menuItems = [
-    { name: "Dashboard", to: "/", iconClassName: "bi bi-speedometer2" },
+    { name: "Dashboard", exact: true, to: "/", iconClassName: "bi bi-speedometer2" },
     {
-        name: "Content", to: "/content", iconClassName: "bi bi-box",
-        subMenus: [{ name: "Courses" }, { name: "Videos" }]
+        name: "Content", exact: true, to: "/content", iconClassName: "bi bi-box",
+        subMenus: [{ name: "Courses", exact: true, to: "/content/courses" },
+        { name: "Videos", exact: true, to: "/content/videos" }]
     },
-    { name: "Blog", to: "/Blog", iconClassName: "bi bi-pencil-square" },
+    { name: "Blog", exact: true, to: "/blog", iconClassName: "bi bi-pencil-square" },
 ]
 
 function SideMenu(props) {
@@ -51,6 +52,7 @@ function SideMenu(props) {
                             <MenuItem
                                 key={index}
                                 name={menuItem.name}
+                                exact={menuItem.exact}
                                 iconClassName={menuItem.iconClassName}
                                 to={menuItem.to}
                                 subMenus={menuItem.subMenus || []}

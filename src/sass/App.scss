@@ -108,6 +108,10 @@
       //   }
       // }
     }
+    .selected-main-menu {
+      background: aliceblue;
+      border-radius: 5px;
+    }
     .sub-menu {
       margin-left: 20px;
       border-left: 1px solid #666;
@@ -131,6 +135,13 @@
     // Sub-menu-Activity:
     .sub-menu-active {
       max-height: 200px;
+
+      .selected-sub-menu {
+        background: aliceblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 3px;
+      }
     }
   }
 
@@ -201,8 +212,8 @@
 .container {
   margin-left: 300px;
   transition: margin-left 0.3s ease-in-out;
-  // box-sizing: border-box;
-  // padding: 10px;
+  box-sizing: border-box;
+  padding: 35px;
 }
 .collapse {
   margin-left: 80px;
